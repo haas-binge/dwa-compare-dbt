@@ -1,0 +1,13 @@
+ddvug_willibald_samen:
+  outputs:
+    dev:
+      account: <account>
+      database: '{{ env_var(''DWH_DWS_DATABASE'',''DWS'') }}'
+      password: '{{ env_var(''DWH_DWS_PASSWORD'') }}'
+      role: <role>
+      schema: <schema>
+      threads: 6
+      type: snowflake
+      user: '{{ env_var(''DWH_DWS_USER'') }}'
+      warehouse: <warehouse>
+ target: dev
