@@ -1,9 +1,8 @@
-{{ config(materialized="view", pre_hook=["{{ dbt_external_tables.stage_external_sources(select='DWS.EXT_WEBSHOP_BESTELLUNG') }}"], post_hook=["{{ insert_hwm(this) }}"]) }}
+{{ config(materialized="view", pre_hook=[], post_hook=["{{ insert_hwm(this) }}"]) }}
 
 {%- set yaml_metadata -%}
 source_model: 
   source_table: EXT_WEBSHOP_BESTELLUNG
-  source_database: DWS
   source_name: LOAD_EXT
 hwm: True
 source_type: snowflake_external_table

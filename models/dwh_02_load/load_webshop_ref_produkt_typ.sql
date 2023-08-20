@@ -1,5 +1,5 @@
 
-{{ config(materialized="table", pre_hook=["{{ dbt_external_tables.stage_external_sources(select='DWS.EXT_WEBSHOP_REF_PRODUKT_TYP') }}"], post_hook=["{{ insert_hwm(this) }}"]) }}
+{{ config(materialized="table", pre_hook=[], post_hook=["{{ insert_hwm(this) }}"]) }}
 with
 {{ pre_hwm(this, omit_with=true, add_comma_at_end=true) }}
 raw_data AS 
