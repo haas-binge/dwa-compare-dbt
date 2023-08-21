@@ -15,7 +15,7 @@ primary_sourcesystem: 'ws'
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
 
-{{ sns_table(pit=metadata_dict['pit'],
+{{ datavault_extension.sns(pit=metadata_dict['pit'],
                     pit_hk=metadata_dict['pit_hk'],
                     pit_satellites=metadata_dict['pit_satellites'],
                     base_entity=metadata_dict['base_entity'],

@@ -26,7 +26,7 @@ add_is_current_flag: true
 {%- set src_edts = metadata_dict['src_edts'] -%}
 {%- set add_is_current_flag = metadata_dict['add_is_current_flag'] -%}
 
-{{ e_sat(sts_sats=sts_sats,
+{{ datavault_extension.efs(sts_sats=sts_sats,
                         link_hashkey=link_hashkey,
                         link_name=link_name,                        
                         driving_key=driving_key,

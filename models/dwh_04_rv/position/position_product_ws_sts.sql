@@ -20,7 +20,7 @@ load_type: full
 {%- set load_type = metadata_dict['load_type'] -%}
 {%- set edts_hashkey = metadata_dict['edts_hashkey'] -%}
 
-{{ status_tracking_sat_v0(
+{{ datavault_extension.sts_v0(
                             tracked_hashkey=tracked_hashkey
                             , stage_source_model=stage_source_model
                             , load_type=load_type

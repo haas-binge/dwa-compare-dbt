@@ -73,7 +73,7 @@ additional_columns:
 {%- set sourcetype = metadata_dict['sourcetype'] -%}
 {%- set columns = metadata_dict['columns'] -%}
 
-{{ load(source_model=source_model
+{{ datavault_extension.load(source_model=source_model
                     , default_columns=default_columns
                     , additional_columns=additional_columns
                     , key_check=key_check
