@@ -12,7 +12,7 @@ stage_source_model: stg_misc_kategorie_termintreue
 {%- set stage_source_model = metadata_dict['stage_source_model'] -%}
 {%- set src_edts = metadata_dict['src_edts'] -%}
 
-{{ status_tracking_sat_v0(
+{{ datavault_extension.sts_v0(
                             tracked_hashkey=tracked_hashkey
                             , stage_source_model=stage_source_model
                             , src_edts=src_edts 

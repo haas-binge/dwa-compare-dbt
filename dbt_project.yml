@@ -26,7 +26,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 dispatch:
   - macro_namespace: datavault4dbt
-    search_order: ['ddvug_willibald_samen', 'datavault4dbt']  # enable override
+    search_order: ['datavault_extension','datavault4dbt']  # enable override
 
 vars:
   #Column Aliases

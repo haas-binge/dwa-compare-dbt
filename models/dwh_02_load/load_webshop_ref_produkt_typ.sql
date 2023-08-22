@@ -1,7 +1,7 @@
 
-{{ config(materialized="table", pre_hook=[], post_hook=["{{ insert_hwm(this) }}"]) }}
+{{ config(materialized="table", pre_hook=["{{ dbt_external_tables.stage_external_sources(select='DWS.EXT_WEBSHOP_REF_PRODUKT_TYP') }}"], post_hook=["{{datavault_extension.insert_hwm(this) }}"]) }}
 with
-{{ pre_hwm(this, omit_with=true, add_comma_at_end=true) }}
+{{ datavault_extension.pre_hwm(this, omit_with=true, add_comma_at_end=true) }}
 raw_data AS 
 (
 	SELECT 
@@ -28,4 +28,4 @@ SELECT
  		,  TO_VARIANT(ARRAY_EXCEPT([REPLACE(IFF(NOT is_dub_check_ok, '{"dub_check": "ldts, typ"}','') || IFF(NOT is_key_check_ok, '{"key_check": "typ"}',''), '}{','},{')],[''])) chk_all_msg
 
  FROM raw_data
-{{ post_hwm(this) }}
+{{ datavault_extension.post_hwm(this) }}
