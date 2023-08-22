@@ -1,4 +1,4 @@
-{{ config(materialized="table", pre_hook=["{{ dbt_external_tables.stage_external_sources(select='DWS.EXT_WEBSHOP_WOHNORT') }}"], post_hook=["{{ insert_hwm(this) }}"]) }}
+{{ config(materialized="table", pre_hook=["{{ dbt_external_tables.stage_external_sources(select='DWS.EXT_WEBSHOP_WOHNORT') }}"], post_hook=["{{ datavault_extension.insert_hwm(this) }}"]) }}
 
 {%- set yaml_metadata -%}
 source_model: 
