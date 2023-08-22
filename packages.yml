@@ -4,4 +4,4 @@ packages:
   - package: dbt-labs/dbt_external_tables
     version: 0.8.5
   - git: https://github.com/haas-binge/dwa-compare-dbt-package.git
-    revision: 1.0.0    
+    revision: main    
