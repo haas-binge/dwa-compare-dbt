@@ -15,13 +15,14 @@ Our initial setup contained an AWS S3 datalake (see page 7 in the presentation) 
 To simplify the process we now offer the data (in the way they looked as external tables) as a snowflake private share named DWA_COMPARE. 
 If you want to access it, just contact us, we are happy to add you.
 
+
 Getting Started
 - you need to have a snowflake account (30-day free trial available)
 - clone the repository and navigate to the project directory.
 - install python 3.9
 - create venv: python -m venv venv
 - upgrade pip: python -m pip install --upgrade pip
-- install dbt (with snowflake 1.5.2): pip install -r requirements.txt
+- install dbt (with snowflake 1.6.0): pip install -r requirements.txt
 - install dependencies: dbt deps
 - configure your database connection using the dbt configuration file or edit profiles.yml in source-directory (includes adding three environment-variables).
 - how to get the base data
@@ -36,7 +37,7 @@ Getting Started
                                                                                      kunde_20220321_20220321_080000.csv                
                                                                                      kunde_20220328_20220328_080000.csv
                                                                       \ ..
-        - adapt the ... @jan: was müsste da getan werden?
+        - adapt the source_type in the load-models. Replace snowflake_external_table_surrogate with snowflake_external_table
 
 - run the dbt commands (dbt build) to create your data models and transform your data.
 
@@ -49,17 +50,6 @@ Please:
 
 Install  (newer / other versions not tested)
 
-
-It provides a framework for defining your data models and transformations, as well as automating the ETL process.
-
-
-Features
-
-Uses dbt to automate ETL processes and build data models
-Supports Snowflake
-Implements best practices for data modeling and transformation using dbt
-Provides a flexible framework for building custom data models and transformations
-Easy to configure and customize to meet your specific needs
 
 
 Contributing
