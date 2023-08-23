@@ -5,7 +5,7 @@ This project contains the complete implementation of the DDVUG Data Warehouse Ch
 
 Our aim is to make it as easy as possible for you to setup the fully functional solution for yourself.
 
-For further information regarding the DDVUG Challenge see: dwa-compare.info
+For further information regarding the DDVUG Challenge see: https://dwa-compare.info/
 Link to the Video of the TDWI presentation: https://www.youtube.com/playlist?list=PLFcYych8PxveerZ-J9POQ4WpFcbd1rhvJ
 Link to the Powerpoint of the TDWI presentation: [Link Text](useful_documents/Willibald_with_dbt_slides.pdf)
 
