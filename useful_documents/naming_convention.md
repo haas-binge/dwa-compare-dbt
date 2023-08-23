@@ -25,21 +25,11 @@ link hash_key-colum: hk_<link_entity_name>_l
 business_key: bk_<business_entity_name>
 <column_name>_orig in case a split of a column on stage-level is reasonable, the full content of the column will be preserved in a column postfixed with _orig (one example here is stage_webshop_position.preis)
 
-CTEs should be named cte_<business_entity_name>
+CTEs should be named cte_<business_entity_name>[_description]
 
 dbt is case sensitive. To avoid confusion, all objects in dbt should be defined in lower-case.
 
 
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------
---> not defined yet:
-{SatSplitReason}	When it is necessary to separate attributes from one source-table into different Satellites (e.g. Rate of Change, GDPR).
-
-Standard: Satellite low volatility → empty
-High rate of change: Satellite high volatility → RCH	
-
-What about stage-tables??
 
 [   ]	encapsulates optional placeholder 	
 
