@@ -22,8 +22,8 @@ sources:
       - name: EXT_MISC_KATEGORIE_TERMINTREUE
       
   - name: LOAD_EXT_META
-    database: "{{ env_var('DWH_DATABASE','DWS') }}"
-    schema: dwh_00_meta
+    database: "{{ env_var('DWH_DATABASE') }}"
+    schema: DWH_00_META
     tags: 
       - meta
     tables:
