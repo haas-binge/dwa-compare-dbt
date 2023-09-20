@@ -1,4 +1,4 @@
-{{ config( enabled=True) }}
+{{ config( enabled=False) }}
 {%- set yaml_metadata -%}
 source_model_source: 'load_roadshow_bestellung'
 load_type: partial

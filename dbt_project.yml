@@ -65,6 +65,7 @@ vars:
   default_collision_key: "'!default'"
   local_timestamp: "TO_TIMESTAMP(DATEADD(HOUR, 1, SYSDATE()))"
   meta_schema: dwh_00_meta
+  external_tables_schema: dwh_01_external
   ext_full_refresh: true
   
 on-run-start:
