@@ -126,6 +126,10 @@ https://docs.snowflake.com/user-guide/admin-trial-account
 The Snowflake Standard edition is enough and it doesn't matter, which cloud provider you choose and where it is located  
 We'd suggest to use the one nearest to you, though.
 
+Within Snowflake you need to define a data warehouse database and a schema for the loading-layer.
+
+Let's call the database DWH_WILLIBALD and the schema DWH_02_LOAD. 
+
 ### Connect dbt with the Snowflake account
 
 Within the profiles.yml all relevant information to connect to the snowflake-account is defined 
